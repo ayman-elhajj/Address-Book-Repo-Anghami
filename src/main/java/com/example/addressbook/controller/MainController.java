@@ -19,9 +19,14 @@ public class MainController {
     }
 
     @RequestMapping("/new")
-    public String showNewProductPage(Model model) {
+    public String showNewPerson(Model model) {
         //Person person = new Person();
         //model.addAttribute("person", person);
         return "new_person";
+    }
+
+    @RequestMapping("/all")
+    public String showAllEntries(Model model) {
+        return "view_all";
     }
 }

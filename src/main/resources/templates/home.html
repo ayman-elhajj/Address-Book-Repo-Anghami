@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<h1>My Address Book App</h1>
+<h1>Hello !</h1>
+<p>Welcome to <span th:text="${appName}">Our App</span></p>
+
+
+<div class="background">
+    <div class="container">
+        <div class="screen">
+            <div class="screen-header">
+                <div class="screen-header-left">
+                    <div class="screen-header-button close"></div>
+                    <div class="screen-header-button maximize"></div>
+                    <div class="screen-header-button minimize"></div>
+                </div>
+                <div class="screen-header-right">
+                    <div class="screen-header-ellipsis"></div>
+                    <div class="screen-header-ellipsis"></div>
+                    <div class="screen-header-ellipsis"></div>
+                </div>
+            </div>
+            <div class="screen-body">
+                <div class="screen-body-item left">
+                    <div class="app-title">
+                        <span>ADD</span>
+                        <span>ENTRY</span>
+                        <a href="/new">Create New Entry</a>
+                    </div>
+                    <div class="app-contact">CONTACT INFO : +961 76 78 64</div>
+                </div>
+                <div class="screen-body-item">
+                    <div class="app-form">
+                        <div class="app-form-group">
+                            <button class="app-form-button">CREATE ENTRY</button>
+                        </div>
+                        <div class="app-form-group">
+                            <button class="app-form-button">VIEW ALL</button>
+                        </div>
+                        <div class="app-form-group">
+                            <button class="app-form-button">SEARCH BY ID</button>
+                        </div>
+                        <div class="app-form-group">
+                            <button class="app-form-button">UPDATE USER</button>
+                        </div>
+                        <div class="app-form-group">
+                            <button class="app-form-button">DELETE USER</button>
+                        </div>
+                        <div class="app-form-group buttons">
+                            <form action="/">
+                                <button class="app-form-button" value="Return to homepage">CANCEL</button>
+                            </form>
+                            <button class="app-form-button">SEND</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

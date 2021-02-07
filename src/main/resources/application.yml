@@ -1,0 +1,16 @@
+app:
+  datasource:
+    jdbcurl: jdbc:postgresql://localhost:5432/demodb
+    username: postgres
+    password: password
+    pool-size: 30
+server:
+  port: 8081
+spring:
+  application:
+    name: Bootstrap Spring Boot
+  thymeleaf:
+    cache: false
+    enabled: 'true '
+    prefix: classpath:/templates/
+    suffix: .html

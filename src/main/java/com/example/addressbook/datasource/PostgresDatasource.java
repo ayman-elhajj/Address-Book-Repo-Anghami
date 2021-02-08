@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class PostgresDatasource {
 
+    //Hikari is a JDBC connection cool
     @Bean
     @ConfigurationProperties("app.datasource")
     public HikariDataSource hikariDataSource(){

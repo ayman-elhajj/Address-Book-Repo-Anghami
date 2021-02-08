@@ -19,7 +19,6 @@ public class PersonController {
         this.personService = personService;
     }
 
-
     @PostMapping
     public void addPerson(@RequestBody Person person) {
         personService.addPerson(person);

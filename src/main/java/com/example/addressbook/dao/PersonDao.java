@@ -14,7 +14,9 @@ public interface PersonDao {
         return insertPerson(id, person);
     }
 
-    List<Person> selectAllPeople();
+    List<Person> selectAllPeople(int max_id, int limit);
+
+    List<Person> searchPeople(String nameField);
 
     Optional<Person> selectPersonById(UUID id);
 

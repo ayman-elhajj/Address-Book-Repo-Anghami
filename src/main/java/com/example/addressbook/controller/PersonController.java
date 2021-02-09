@@ -24,9 +24,20 @@ public class PersonController {
         personService.addPerson(person);
     }
 
-    @GetMapping
+    @GetMapping()
+    public List<Person> getAllPeople(@RequestParam(value = "start", defaultValue = "0")String start_id, @RequestParam(value = "limit", defaultValue = "3") String limit ) {
+        return personService.getAllPeople(Integer.valueOf(start_id), Integer.valueOf(limit));
+    }
+
+    // Retrieves all entries with no limit, testing purposes only
+    /* @GetMapping()
     public List<Person> getAllPeople() {
         return personService.getAllPeople();
+    } */
+
+    @GetMapping("/search")
+    public List<Person> searchPeople(@RequestParam(value = "q")String nameField) {
+        return personService.searchPeople(nameField);
     }
 
     @GetMapping(path = "{id}")

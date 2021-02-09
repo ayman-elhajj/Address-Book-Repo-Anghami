@@ -25,8 +25,8 @@ public class PersonService {
         return personDao.insertPerson(person);
     }
 
-    public List<Person> getAllPeople() {
-        return personDao.selectAllPeople();
+    public List<Person> getAllPeople(int start_id, int limit) {
+        return personDao.selectAllPeople(start_id, limit);
     }
 
     public Optional<Person> getPersonById(UUID id) {
@@ -39,6 +39,10 @@ public class PersonService {
 
     public int updatePerson(UUID id, Person newPerson){
         return personDao.updatePersonById(id, newPerson);
+    }
+
+    public List<Person> searchPeople(String nameField){
+        return personDao.searchPeople(nameField);
     }
 }
 
